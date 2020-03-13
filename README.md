@@ -8,4 +8,11 @@ This is a simple NewsApp built with Laravel 6. To use, kindly run the following:
 
 4. php artisan migrate
 
-5. 
+ADMIN LOGIN DETAILS
+
+Register an account with:
+
+Email: admin@gmail.com
+
+Then you can login as the app admin.
+
