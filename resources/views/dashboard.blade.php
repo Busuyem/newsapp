@@ -7,7 +7,7 @@
             <div class="card">
 
                 <div class="card-body">
-                    <h4 class="text text-center">Welcome to your dashboard, {{auth()->user()->name}}!</h4>
+                    <h4 class="text text-center"><b class="text-danger">Welcome to your dashboard, {{auth()->user()->name}}!</b></h4>
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
@@ -27,7 +27,7 @@
                 
                 <div>
                     @foreach (auth()->user()->news as $key => $new)
-                    <p>{{$key+1}}.<a href="{{route('news.show', $new->id)}}"> {{$new->title}}</a></p>
+                    <p>{{$key+1}}.<b><a href="{{route('news.show', $new->id)}}"> {{$new->title}}</a></b></p>
                     
                     @endforeach
                   

@@ -2,9 +2,9 @@
 @section('title', "List of App Users")
 @section('content')
 <div class="container">
-    <div class="text-center badge badge-info mb-2 p-2">
+    <div class="text-center mb-2 p-2">
         
-        <h3>Here is the List of All the Registered Users</h3>
+        <h3 class="text-danger"><b>Here is the List of All the Registered Users</b></h3>
     </div>
 <table class="table table-dark">
     <thead>

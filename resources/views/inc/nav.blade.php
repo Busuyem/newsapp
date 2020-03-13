@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+<nav class="navbar navbar-expand-md navbar-info bg-light shadow-sm">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
             {{ config('app.name', 'Laravel') }}
@@ -12,11 +12,6 @@
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('news.create') }}">Post a news</a>
-                </li>
-
-                
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('users.show') }}">View all Users</a>
                 </li>
                
 
@@ -47,6 +42,12 @@
                                              document.getElementById('logout-form').submit();">
                                 {{ __('Logout') }}
                             </a>
+
+                            @if(auth()->user()->email == "admin@gmail.com")
+
+                                <a class="dropdown-item" href="{{ route('users.show') }}">Users arena</a>
+
+                            @endif
 
                              <a class="dropdown-item" href="{{ route('dashboard') }}">Dashboard</a>
                             

@@ -5,7 +5,7 @@
 @include('inc.message')
     <div class="card col-md-10">
         <div class="card-body">
-             <h5 class="text text-center"><b>{{$news->title}}</b><br /><small>posted by {{$news->user->name}} posted exactly {{ Carbon\Carbon::parse($news->created_at)->diffForHumans() }}</small></h5>
+             <h5 class="text text-center"><b class="text-danger">{{$news->title}}</b><br /><small>posted by {{$news->user->name}} posted exactly {{ Carbon\Carbon::parse($news->created_at)->diffForHumans() }}</small></h5>
                 <p>{{$news->body}}</p>
                 
                 @if(auth()->user()->email == 'admin@gmail.com' || auth()->user()->id == $news->user_id)

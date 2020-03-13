@@ -21,6 +21,6 @@ class AdminMiddleware
 
         }
 
-        return redirect('/dashboard');
+        return redirect('/')->with('users', 'You are not authorized to view users.');
     }
 }

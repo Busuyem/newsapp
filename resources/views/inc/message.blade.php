@@ -31,6 +31,17 @@
         {{session('newsUpdated')}}
 
     </div>
+
+ @endif
+
+
+ @if(session("users"))
+   
+    <div class="alert alert-danger mb-2">
+        
+        {{session('users')}}
+
+    </div>
    
 
 @endif
